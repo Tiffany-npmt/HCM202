@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Award, RotateCcw, ArrowUp, HelpCircle, Check, X, ShieldQuestion } from "lucide-react";
+import { Award, RotateCcw, ArrowUp, Check, X, ShieldQuestion } from "lucide-react";
 import SectionHeader from "@/components/ui/SectionHeader";
 import { quizQuestions } from "@/data/quizData";
 

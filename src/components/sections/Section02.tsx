@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Globe, Compass, Landmark, Users, ArrowRight } from "lucide-react";
-import SectionHeader from "@/components/ui/SectionHeader";
 import FlowDiagram from "@/components/ui/FlowDiagram";
 import Modal from "@/components/ui/Modal";
 import { modalsData } from "@/data/modalData";
@@ -31,13 +30,7 @@ export default function Section02() {
       className="py-16 md:py-24 bg-bg-light border-b border-border-light scroll-mt-18"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-        {/* Section Header */}
-        <SectionHeader
-          title=""
-          subtitle="Khẳng định quyền tự quyết hoàn toàn của quốc gia và sáng tạo lộ trình giải phóng thuộc địa."
-        />
-
+        
         {/* 13.1 Real Independence Infographic */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-center mt-12">
 

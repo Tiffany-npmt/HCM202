@@ -10,11 +10,10 @@ interface NavLink {
 }
 
 const navLinks: NavLink[] = [
-  { label: "Trang chủ", targetId: "hero", },
-  { label: "Phần 1", targetId: "section-1", },
-  { label: "Phần 2", targetId: "section-2", },
-  { label: "Phần 3", targetId: "section-3", },
-  { label: "Phần 4", targetId: "section-4", },
+  { label: "Mở đầu", targetId: "hero", },
+  { label: "Độc lập", targetId: "section-1", },
+  { label: "Đại đoàn kết", targetId: "section-3", },
+  { label: "Tính chủ động", targetId: "section-4", },
   { label: "Ôn tập", targetId: "quiz", },
 ];
 

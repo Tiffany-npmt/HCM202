@@ -2,7 +2,8 @@
 
 import React from "react";
 import { motion as dMotion } from "framer-motion";
-import { ArrowRight, GraduationCap, Play } from "lucide-react";
+import { ArrowRight, Play } from "lucide-react";
+import Image from "next/image";
 
 export default function HeroSection() {
   const scrollToId = (id: string) => {
@@ -35,10 +36,10 @@ export default function HeroSection() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
+
           {/* LEFT COLUMN: Text Info */}
           <div className="lg:col-span-7 flex flex-col items-start text-left">
-            
+
             {/* Small Badge */}
             <dMotion.span
               initial={{ opacity: 0, y: -15 }}
@@ -119,35 +120,20 @@ export default function HeroSection() {
 
             {/* Image Container with overlays */}
             <div className="w-full h-full rounded-2xl border border-white/15 overflow-hidden shadow-2xl relative group bg-slate-900 flex flex-col justify-center items-center p-8 select-none">
-              
+
               {/* Overlay tint */}
               <div className="absolute inset-0 bg-primary-blue/15 mix-blend-overlay z-10 pointer-events-none" />
               <div className="absolute inset-0 bg-gradient-to-t from-dark-navy via-transparent to-transparent z-10 pointer-events-none" />
 
-              {/* Tasteful vector representation representing history */}
-              <div className="text-center relative z-20 flex flex-col items-center">
-                <div className="w-20 h-20 bg-primary-blue/20 border border-primary-blue/30 text-light-blue rounded-full flex items-center justify-center mb-6">
-                  <GraduationCap className="w-10 h-10" />
-                </div>
-                
-                <h3 className="text-xl font-bold text-white tracking-wide">
-                  HỒ CHÍ MINH
-                </h3>
-                <p className="text-xs text-light-blue font-bold tracking-widest uppercase mt-1">
-                  1890 - 1969
-                </p>
-
-                {/* Classic Quote inside the card */}
-                <div className="mt-6 max-w-xs border-t border-white/10 pt-4">
-                  <p className="text-sm text-slate-300 italic font-medium leading-relaxed font-serif">
-                    &ldquo;Không có gì quý hơn độc lập, tự do.&rdquo;
-                  </p>
-                </div>
-                
-                {/* Historical design element */}
-                <div className="mt-8 text-[10px] text-slate-500 font-bold uppercase tracking-widest border border-slate-700/50 px-3 py-1 rounded-md bg-slate-950/30">
-                  Tài liệu học tập &bull; ĐH FPT
-                </div>
+              {/* Hồ Chí Minh Image */}
+              <div className="mt-6 w-full max-w-xs mx-auto overflow-hidden rounded-2xl border border-white/10 shadow-lg">
+                <Image
+                  src="/images/chan-dung-bac.jpg"
+                  alt="Hồ Chí Minh"
+                  width={400}
+                  height={500}
+                  className="w-full h-auto object-cover"
+                />
               </div>
 
               {/* Decorative border corners inside */}

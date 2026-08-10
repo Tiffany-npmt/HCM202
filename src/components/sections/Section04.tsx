@@ -48,7 +48,6 @@ export default function Section04() {
 
         {/* Section Header */}
         <SectionHeader
-          badge="PHẦN 04"
           title="TÍNH CHỦ ĐỘNG & BẠO LỰC CÁCH MẠNG"
           subtitle="Luận điểm sáng tạo lớn nhất về khả năng chủ động bùng nổ, giành thắng lợi và phương pháp đấu tranh quần chúng."
           isDarkTheme={false}
@@ -73,7 +72,7 @@ export default function Section04() {
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10">
 
             <motion.div variants={questionItem} className="flex-1">
-              <p className="text-lg md:text-xl font-serif italic text-text-dark">
+              <p className="text-lg md:text-xl font-['Noto_Serif'] italic text-text-dark">
                 &ldquo;Cách mạng thuộc địa có phải ngồi chờ cách mạng chính quốc thắng lợi?&rdquo;
               </p>
             </motion.div>
@@ -81,7 +80,7 @@ export default function Section04() {
             <div className="hidden md:block w-px h-16 bg-border-light" />
 
             <motion.div variants={questionItem} className="flex-1">
-              <p className="text-lg md:text-xl font-serif italic text-text-dark">
+              <p className="text-lg md:text-xl font-['Noto_Serif'] italic text-text-dark">
                 &ldquo;Và dân ta phải giành chính quyền bằng phương pháp nào?&rdquo;
               </p>
             </motion.div>
@@ -94,10 +93,6 @@ export default function Section04() {
 
           {/* Left panel */}
           <div className="lg:col-span-5 flex flex-col justify-center">
-
-            <span className="text-xs uppercase font-extrabold text-primary-blue bg-primary-blue/10 px-2.5 py-1 rounded border border-primary-blue/20 inline-block w-fit mb-4">
-              LUẬN ĐIỂM SÁNG TẠO 4 (Sáng tạo nhất)
-            </span>
 
             <h3 className="text-xl sm:text-2xl font-bold text-dark-navy leading-tight">
               Tính chủ động giành thắng lợi của cách mạng thuộc địa
@@ -313,10 +308,6 @@ export default function Section04() {
 
           {/* Right info */}
           <div className="lg:col-span-5 flex flex-col justify-center">
-
-            <span className="text-xs uppercase font-extrabold text-primary-blue bg-primary-blue/10 px-2.5 py-1 rounded border border-primary-blue/20 inline-block w-fit mb-4">
-              LUẬN ĐIỂM SÁNG TẠO 5
-            </span>
 
             <h3 className="text-xl sm:text-2xl font-bold text-dark-navy leading-tight">
               Phương pháp bạo lực cách mạng toàn dân

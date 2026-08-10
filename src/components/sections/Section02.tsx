@@ -7,6 +7,7 @@ import SectionHeader from "@/components/ui/SectionHeader";
 import FlowDiagram from "@/components/ui/FlowDiagram";
 import Modal from "@/components/ui/Modal";
 import { modalsData } from "@/data/modalData";
+import Image from "next/image";
 
 export default function Section02() {
   const [activeModalId, setActiveModalId] = useState<string | null>(null);
@@ -30,17 +31,16 @@ export default function Section02() {
       className="py-16 md:py-24 bg-bg-light border-b border-border-light scroll-mt-18"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <SectionHeader
-          badge="PHẦN 02"
-          title="ĐỘC LẬP THẬT SỰ & CON ĐƯỜNG GIẢI PHÓNG"
+          title=""
           subtitle="Khẳng định quyền tự quyết hoàn toàn của quốc gia và sáng tạo lộ trình giải phóng thuộc địa."
         />
 
         {/* 13.1 Real Independence Infographic */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-center mt-12">
-          
+
           {/* Left Panel: Infographic */}
           <div className="lg:col-span-7 bg-white border border-border-light rounded-2xl p-6 md:p-8 shadow-sm">
             <h3 className="text-lg font-bold text-dark-navy text-center mb-6">
@@ -109,46 +109,16 @@ export default function Section02() {
               {/* Vietnam map representation in simple stylized vector box */}
               <div className="my-6 h-56 rounded-xl bg-slate-900 border border-white/5 relative flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 bg-primary-blue/5 pointer-events-none" />
-                
-                {/* SVG Vietnam Map Representation */}
-                <svg className="w-full h-full p-4 relative z-10" viewBox="0 0 200 200" fill="none">
-                  {/* S-shape representation path */}
-                  <motion.path
-                    initial={{ pathLength: 0 }}
-                    whileInView={{ pathLength: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 1.5 }}
-                    d="M 100 20 C 110 30, 95 40, 105 50 C 115 60, 110 70, 105 80 C 100 90, 120 100, 115 110 C 110 120, 115 130, 105 140 C 95 150, 110 160, 100 170"
-                    stroke="#2563EB"
-                    strokeWidth="4"
-                    strokeLinecap="round"
-                  />
-                  {/* North Point */}
-                  <circle cx="100" cy="20" r="3" fill="#3B82F6" className="animate-ping" />
-                  <circle cx="100" cy="20" r="3" fill="#3B82F6" />
-                  <text x="110" y="24" fill="#94A3B8" fontSize="8" fontWeight="bold">Hà Nội</text>
-                  
-                  {/* Center Point */}
-                  <circle cx="105" cy="80" r="3" fill="#3B82F6" />
-                  <text x="115" y="84" fill="#94A3B8" fontSize="8" fontWeight="bold">Đà Nẵng</text>
-                  
-                  {/* South Point */}
-                  <circle cx="100" cy="170" r="3" fill="#3B82F6" className="animate-ping" />
-                  <circle cx="100" cy="170" r="3" fill="#3B82F6" />
-                  <text x="70" y="174" fill="#94A3B8" fontSize="8" fontWeight="bold">TP. Hồ Chí Minh</text>
 
-                  {/* Islands representing Truong Sa/Hoang Sa */}
-                  {/* Hoang Sa */}
-                  <circle cx="140" cy="85" r="2" fill="#2563EB" />
-                  <circle cx="144" cy="89" r="1.5" fill="#2563EB" />
-                  <text x="146" y="84" fill="#64748B" fontSize="6" fontWeight="bold">QĐ. Hoàng Sa</text>
-                  
-                  {/* Truong Sa */}
-                  <circle cx="155" cy="135" r="2" fill="#2563EB" />
-                  <circle cx="160" cy="138" r="1.5" fill="#2563EB" />
-                  <text x="130" y="146" fill="#64748B" fontSize="6" fontWeight="bold">QĐ. Trường Sa (Việt Nam)</text>
-                </svg>
-                
+                <div className="w-full h-full relative">
+                  <Image
+                    src="/images/vietnam-map.png"
+                    alt="Bản đồ Việt Nam"
+                    fill
+                    className="object-contain scale-200"
+                  />
+                </div>
+
                 {/* Floating quote label */}
                 <div className="absolute bottom-3 left-3 right-3 bg-slate-950/80 border border-white/10 rounded-lg p-2 text-center text-xs font-serif italic text-white z-20">
                   &ldquo;Nước Việt Nam là một, dân tộc Việt Nam là một.&rdquo;
@@ -168,9 +138,6 @@ export default function Section02() {
         {/* 13.3 Creative Point 1 (Lộ trình cách mạng) */}
         <div className="mt-16 md:mt-24 pt-12 border-t border-border-light">
           <div className="text-center mb-8">
-            <span className="inline-block px-3 py-1 bg-very-light-blue text-primary-blue text-xs font-extrabold uppercase rounded border border-primary-blue/10 mb-3">
-              LUẬN ĐIỂM SÁNG TẠO 1
-            </span>
             <h3 className="text-2xl font-bold text-dark-navy">CON ĐƯỜNG VÀ LỘ TRÌNH GIẢI PHÓNG THUỘC ĐỊA</h3>
             <p className="text-xs sm:text-sm text-muted-gray mt-2 max-w-xl mx-auto">
               Đảo ngược lộ trình giải phóng kinh điển để đặt lợi ích của toàn thể dân tộc lên trên hết, trước hết.
@@ -219,7 +186,7 @@ export default function Section02() {
             {/* Case: Comparison Columns (specifically for so-sanh-lo-trinh modal) */}
             {currentModalData.columns && (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-                
+
                 {/* Column 1: Classical Theory */}
                 <div className="bg-bg-light border border-border-light rounded-xl p-5">
                   <h4 className="font-extrabold text-muted-gray text-sm uppercase tracking-wide border-b border-border-light pb-2 mb-3">

@@ -9,6 +9,7 @@ import Timeline from "@/components/ui/Timeline";
 import Modal from "@/components/ui/Modal";
 import { timelineMilestones, TimelineMilestone } from "@/data/timelineData";
 import { modalsData } from "@/data/modalData";
+import Image from "next/image";
 
 export default function Section01() {
   // Modal state
@@ -21,6 +22,15 @@ export default function Section01() {
 
   const boiCanhData = modalsData["boi-canh-lich-su"];
 
+  const milestoneImages: Record<string, string> = {
+    1911: "/images/1911.jpg",
+    1919: "/images/1919.jpg",
+    1930: "/images/1930.jpg",
+    1945: "/images/1945.png",
+    1946: "/images/1946.jpg",
+    1966: "/images/1966.png",
+  };
+
   return (
     <section
       id="section-1"
@@ -30,7 +40,6 @@ export default function Section01() {
 
         {/* Section Header */}
         <SectionHeader
-          badge="PHẦN 01"
           title="ĐỘC LẬP DÂN TỘC GẮN LIỀN VỚI TỰ DO, HẠNH PHÚC"
           subtitle="Độc lập là quyền thiêng liêng và độc lập phải gắn với tự do, hạnh phúc của nhân dân."
         />
@@ -131,6 +140,7 @@ export default function Section01() {
         {/* 1.2 Interactive Milestones Timeline */}
         <div className="mt-16 md:mt-24 pt-12 border-t border-border-light">
           <div className="text-center mb-8">
+            <h2 className="text-2xl md:text-3xl font-extrabold text-primary-blue mb-2">ĐỘC LẬP LÀ QUYỀN THIÊNG LIÊNG</h2>
             <h3 className="text-xl font-bold text-dark-navy">HÀNH TRÌNH TƯ TƯỞNG QUA CÁC MỐC LỊCH SỬ</h3>
             <p className="text-xs sm:text-sm text-muted-gray mt-2">Nhấp vào từng năm trên dòng thời gian để xem chi tiết dấu ấn lịch sử.</p>
           </div>
@@ -142,6 +152,11 @@ export default function Section01() {
 
         {/* 1.3 Independence & Happiness Quote Block */}
         <div className="mt-16 md:mt-24 pt-12 border-t border-border-light max-w-4xl mx-auto">
+          <div className="text-center mb-6">
+            <h2 className="text-2xl md:text-2xl font-extrabold text-primary-blue">
+              ĐỘC LẬP PHẢI GẮN VỚI TỰ DO, HẠNH PHÚC CỦA NHÂN DÂN
+            </h2>
+          </div>
           <QuoteBlock
             quote="Nước độc lập mà dân không hưởng hạnh phúc tự do, thì độc lập cũng chẳng có nghĩa lý gì."
             source="Thư gửi Ủy ban nhân dân các kỳ, tỉnh, huyện và làng, 10/1945"
@@ -247,11 +262,27 @@ export default function Section01() {
             </div>
 
             {/* Archival Graphic Placeholders */}
-            <div className="h-40 rounded-xl bg-slate-950 border border-white/5 flex flex-col items-center justify-center p-4 text-center select-none relative overflow-hidden">
-              <div className="absolute inset-0 bg-primary-blue/5 z-0" />
-              <Calendar className="w-8 h-8 text-primary-blue/50 mb-2 relative z-10" />
-              <span className="text-xs text-slate-400 font-bold uppercase relative z-10">TƯ LIỆU LỊCH SỬ VIỆT NAM ({selectedMilestone.year})</span>
-              <span className="text-[10px] text-slate-500 mt-1 relative z-10">Nhóm 6 &bull; Đại học FPT</span>
+            <div className="h-64 rounded-xl bg-white border border-border-light overflow-hidden relative">
+              {milestoneImages[selectedMilestone.year] ? (
+                <Image
+                  src={milestoneImages[selectedMilestone.year]}
+                  alt={`Tư liệu lịch sử Việt Nam năm ${selectedMilestone.year}`}
+                  fill
+                  className="object-contain"
+                />
+              ) : (
+                <div className="w-full h-full flex flex-col items-center justify-center text-center p-4 bg-slate-50">
+                  <Calendar className="w-8 h-8 text-primary-blue/50 mb-2" />
+
+                  <span className="text-xs text-text-dark font-bold uppercase">
+                    TƯ LIỆU LỊCH SỬ VIỆT NAM ({selectedMilestone.year})
+                  </span>
+
+                  <span className="text-[10px] text-muted-gray mt-1">
+                    Nhóm 6 • Đại học FPT
+                  </span>
+                </div>
+              )}
             </div>
           </div>
         )}

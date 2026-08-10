@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Users, Heart } from "lucide-react";
+import { Users, Heart, CircleGauge } from "lucide-react";
 import SectionHeader from "@/components/ui/SectionHeader";
 import QuoteBlock from "@/components/ui/QuoteBlock";
 
@@ -34,7 +34,6 @@ export default function Section03() {
 
         {/* Section Header */}
         <SectionHeader
-          badge="PHẦN 03"
           title="ĐẢNG LÃNH ĐẠO & ĐẠI ĐOÀN KẾT TOÀN DÂN TỘC"
           subtitle="Vai trò nòng cốt của Đảng cách mạng bản địa và sức mạnh to lớn từ liên minh đại đoàn kết."
         />
@@ -44,9 +43,6 @@ export default function Section03() {
 
           {/* Left: Metaphor & Formula */}
           <div className="lg:col-span-7 bg-bg-light border border-border-light rounded-2xl p-6 md:p-8 shadow-sm">
-            <span className="text-xs uppercase font-extrabold text-primary-blue bg-very-light-blue px-2.5 py-1 rounded border border-primary-blue/10">
-              Luận điểm sáng tạo 2
-            </span>
             <h3 className="mt-4 text-xl font-bold text-dark-navy">
               VAI TRÒ LÃNH ĐẠO CỦA ĐẢNG CỘNG SẢN VIỆT NAM
             </h3>
@@ -112,19 +108,16 @@ export default function Section03() {
             {/* Metaphor: Party as the Helmsman */}
             <div className="mt-8 flex flex-col md:flex-row items-center gap-6 p-5 border border-dashed border-border-light rounded-xl bg-white">
               {/* Boat/Helm representation in SVG */}
-              <div className="w-20 h-20 bg-slate-900 text-primary-blue rounded-xl flex items-center justify-center flex-shrink-0">
-                <svg className="w-12 h-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M12 2v20M2 12h20M12 2a10 10 0 1 0 10 10M12 2a10 10 0 1 1-10 10" />
-                  <circle cx="12" cy="12" r="3" fill="#2563EB" />
-                </svg>
+              <div className="w-12 h-12 rounded-lg bg-primary-blue/10 flex items-center justify-center flex-shrink-0">
+                <CircleGauge className="w-7 h-7 text-primary-blue" />
               </div>
-              <div className="flex-1">
+              <div className="flex-1 min-w-0">
                 <h4 className="font-bold text-dark-navy text-sm sm:text-base">Đảng như &ldquo;Người cầm lái&rdquo;</h4>
                 <p className="text-xs text-muted-gray leading-relaxed mt-1">
                   Đảng vạch lối đường đi, đóng vai trò lãnh đạo chèo lái con thuyền cách mạng. Nhưng để đưa thuyền vượt sóng gió cần sức mạnh cơ bắp của toàn thể Nhân dân trong khoang.
                 </p>
 
-                <div className="mt-3 flex gap-4 text-xs font-extrabold uppercase tracking-wider text-primary-blue">
+                <div className="mt-3 flex items-center justify-center gap-3 text-xs font-extrabold uppercase tracking-wider text-primary-blue whitespace-nowrap">
                   <span>Đảng: Người cầm lái</span>
                   <span>&bull;</span>
                   <span>Nhân dân: Sức mạnh</span>
@@ -150,9 +143,6 @@ export default function Section03() {
         <div className="mt-16 md:mt-24 pt-12 border-t border-border-light">
 
           <div className="text-center mb-8">
-            <span className="inline-block px-3 py-1 bg-very-light-blue text-primary-blue text-xs font-extrabold uppercase rounded border border-primary-blue/10 mb-3">
-              Luận điểm sáng tạo 3
-            </span>
             <h3 className="text-2xl font-bold text-dark-navy">
               CHIẾN LƯỢC ĐẠI ĐOÀN KẾT TOÀN DÂN TỘC
             </h3>
@@ -196,8 +186,8 @@ export default function Section03() {
                         top: `${top}%`,
                       }}
                       className={`absolute w-32 min-h-16 px-3 py-3 text-center rounded-xl border text-sm font-bold tracking-wide cursor-pointer transition-all duration-300 z-10 -translate-x-1/2 -translate-y-1/2 ${isHovered
-                          ? "bg-primary-blue border-primary-blue text-white scale-110 shadow-lg"
-                          : "bg-white border-border-light text-dark-navy hover:border-primary-blue"
+                        ? "bg-primary-blue border-primary-blue text-white scale-110 shadow-lg"
+                        : "bg-white border-border-light text-dark-navy hover:border-primary-blue"
                         }`}
                     >
                       {node.label}

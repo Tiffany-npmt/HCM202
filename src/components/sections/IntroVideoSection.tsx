@@ -53,7 +53,6 @@ export default function IntroVideoSection() {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader
-          badge="Giới thiệu chủ đề"
           title="HÀNH TRÌNH TƯ TƯỞNG"
           subtitle="Nhìn lại bối cảnh lịch sử và hành trình hình thành tư tưởng Hồ Chí Minh về độc lập dân tộc"
         />

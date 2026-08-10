@@ -86,7 +86,6 @@ export default function QuizSection() {
         
         {/* Section Header */}
         <SectionHeader
-          badge="🎯 THỬ THÁCH KIẾN THỨC"
           title="ÔN TẬP KIẾN THỨC CHUYÊN ĐỀ"
           subtitle="Hãy tự đánh giá sự hiểu biết của bạn về những luận điểm sáng tạo của Hồ Chí Minh thông qua 7 câu hỏi trắc nghiệm khách quan."
         />

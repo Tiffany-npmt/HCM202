@@ -19,7 +19,7 @@ const networkNodes: NodeData[] = [
   { id: "tieu-tu-san", label: "Tiểu tư sản", description: "Tầng lớp yêu nước, có tinh thần dân tộc cao và dễ tiếp thu tư tưởng tiến bộ xã hội.", pos: "bottom-[-40px] left-[50%] translate-x-[-50%]" },
   { id: "trung-nong", label: "Trung nông", description: "Lực lượng trung gian nông thôn cần được giáo dục, lôi kéo tham gia vào khối liên minh công nông.", pos: "bottom-[30px] left-[10px]" },
   { id: "tu-san-dan-toc", label: "Tư sản dân tộc", description: "Có tinh thần yêu nước chống đế quốc nhưng lập trường giai cấp không kiên định, cần được tập hợp hoặc trung lập.", pos: "top-[10px] left-[10px]" },
-  { id: "yeu-nuoc", label: "Người yêu nước", description: "Tất cả các cá nhân, nhân sĩ và kiều bào có tấm lòng hướng về sự tự do độc lập của Tổ quốc.", pos: "top-[-20px] right-[30%] translate-x-[50%]" }
+  { id: "yeu-nuoc", label: "Người yêu nước & Kiều bào nước ngoài", description: "Tất cả các cá nhân, nhân sĩ và kiều bào có tấm lòng hướng về sự tự do độc lập của Tổ quốc.", pos: "top-[-20px] right-[30%] translate-x-[50%]" }
 ];
 
 export default function Section03() {

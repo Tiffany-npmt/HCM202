@@ -41,7 +41,7 @@ export default function Section01() {
         {/* Section Header */}
         <SectionHeader
           title="ĐỘC LẬP DÂN TỘC GẮN LIỀN VỚI TỰ DO, HẠNH PHÚC"
-          subtitle="Độc lập là quyền thiêng liêng và độc lập phải gắn với tự do, hạnh phúc của nhân dân."
+          subtitle="Độc lập dân tộc là quyền thiêng liêng và độc lập phải gắn với tự do, hạnh phúc của nhân dân."
         />
 
         {/* 1.1 Historical Context Block */}
@@ -106,15 +106,15 @@ export default function Section01() {
           <div className="lg:col-span-7 flex flex-col gap-6">
             <h3 className="text-lg font-bold text-dark-navy flex items-center gap-2">
               <HelpCircle className="w-5 h-5 text-primary-blue" />
-              <span>4 LUẬN ĐIỂM VỀ ĐỘC LẬP</span>
+              <span>4 LUẬN ĐIỂM VỀ ĐỘC LẬP DÂN TỘC</span>
             </h3>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
-                { num: "01", title: "Độc lập là quyền thiêng liêng", desc: "Độc lập là quyền tự quyết, bình đẳng giữa các quốc gia." },
-                { num: "02", title: "Độc lập gắn với tự do, hạnh phúc", desc: "Nước độc lập nhưng dân phải ấm no, hạnh phúc, tự do." },
-                { num: "03", title: "Độc lập thật sự, hoàn toàn", desc: "Không chấp nhận nền độc lập hình thức hay bù nhìn." },
-                { num: "04", title: "Độc lập gắn với thống nhất toàn vẹn lãnh thổ", desc: "Nam Bắc một nhà, chủ quyền đất nước không thể chia cắt." }
+                { num: "01", title: "Độc lập, tự do là quyền thiêng liêng, bất khả xâm phạm của tất cả các dân tộc", desc: "Quyền tự quyết và quyền bình đẳng giữa các quốc gia là lẽ phải không ai chối cãi được." },
+                { num: "02", title: "Độc lập dân tộc gắn với tự do, hạnh phúc của nhân dân", desc: "Nước độc lập mà dân không hưởng ấm no, tự do thì độc lập cũng không có ý nghĩa gì." },
+                { num: "03", title: "Độc lập dân tộc phải là nền độc lập thật sự, hoàn toàn và triệt để", desc: "Kiên quyết đấu tranh, không chấp nhận mọi thứ độc lập giả hiệu, hình thức hay bù nhìn." },
+                { num: "04", title: "Độc lập dân tộc gắn với thống nhất toàn vẹn lãnh thổ", desc: " Nước Việt Nam là một, dân tộc Việt Nam là một, chủ quyền quốc gia không thể bị chia cắt." }
               ].map((card) => (
                 <motion.div
                   key={card.num}
@@ -140,7 +140,7 @@ export default function Section01() {
         {/* 1.2 Interactive Milestones Timeline */}
         <div className="mt-16 md:mt-24 pt-12 border-t border-border-light">
           <div className="text-center mb-8">
-            <h2 className="text-2xl md:text-3xl font-extrabold text-primary-blue mb-2">ĐỘC LẬP LÀ QUYỀN THIÊNG LIÊNG</h2>
+            <h2 className="text-2xl md:text-3xl font-extrabold text-primary-blue mb-2">ĐỘC LẬP DÂN TỘC LÀ QUYỀN THIÊNG LIÊNG</h2>
             <h3 className="text-xl font-bold text-dark-navy">HÀNH TRÌNH TƯ TƯỞNG QUA CÁC MỐC LỊCH SỬ</h3>
             <p className="text-xs sm:text-sm text-muted-gray mt-2">Nhấp vào từng năm trên dòng thời gian để xem chi tiết dấu ấn lịch sử.</p>
           </div>
@@ -154,7 +154,7 @@ export default function Section01() {
         <div className="mt-16 md:mt-24 pt-12 border-t border-border-light max-w-4xl mx-auto">
           <div className="text-center mb-6">
             <h2 className="text-2xl md:text-2xl font-extrabold text-primary-blue">
-              ĐỘC LẬP PHẢI GẮN VỚI TỰ DO, HẠNH PHÚC CỦA NHÂN DÂN
+              ĐỘC LẬP DÂN TỘC PHẢI GẮN VỚI TỰ DO, HẠNH PHÚC CỦA NHÂN DÂN
             </h2>
           </div>
           <QuoteBlock

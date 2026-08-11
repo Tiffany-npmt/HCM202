@@ -30,14 +30,14 @@ export default function Section02() {
       className="py-16 md:py-24 bg-bg-light border-b border-border-light scroll-mt-18"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* 13.1 Real Independence Infographic */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-center mt-12">
 
           {/* Left Panel: Infographic */}
           <div className="lg:col-span-7 bg-white border border-border-light rounded-2xl p-6 md:p-8 shadow-sm">
             <h3 className="text-lg font-bold text-dark-navy text-center mb-6">
-              ĐỘC LẬP THỰC QUYỀN (TOÀN DIỆN & TRIỆT ĐỂ)
+              ĐỘC LẬP DÂN TỘC THỰC SỰ, TOÀN DIỆN VÀ TRIỆT ĐỂ
             </h3>
 
             {/* Sơ đồ kết nối độc lập thực quyền */}
@@ -50,7 +50,7 @@ export default function Section02() {
                   whileHover={{ scale: 1.05 }}
                   className="bg-primary-blue text-white font-extrabold text-sm sm:text-base px-6 py-3 rounded-full shadow-lg border border-primary-blue/30 text-center tracking-wide"
                 >
-                  ĐỘC LẬP THỰC QUYỀN
+                  ĐỘC LẬP DÂN TỘC THỰC SỰ
                 </motion.div>
               </div>
 
@@ -78,7 +78,7 @@ export default function Section02() {
             </div>
 
             <p className="mt-6 text-sm text-muted-gray text-center leading-relaxed">
-              &ldquo;Độc lập thực tế phải đi cùng quyền tự quyết về ngoại giao, quân đội, tài chính và tổ chức nhà nước.&rdquo;
+              &ldquo;Độc lập dân tộc phải là độc lập thực sự, toàn diện và triệt để; dân tộc phải có quyền tự quyết trên các lĩnh vực đối nội và đối ngoại.&rdquo;
             </p>
 
             <button
@@ -96,7 +96,7 @@ export default function Section02() {
                 Toàn vẹn lãnh thổ
               </span>
               <h3 className="mt-4 text-xl font-bold text-dark-navy leading-tight">
-                Độc lập gắn với Thống nhất đất nước
+                Độc lập dân tộc gắn với Thống nhất đất nước
               </h3>
 
               {/* Vietnam map representation in simple stylized vector box */}
@@ -139,13 +139,6 @@ export default function Section02() {
 
           {/* Sequential Flow Component */}
           <FlowDiagram nodes={flowNodes} />
-
-          {/* Special Highlight Label */}
-          <div className="text-center mt-6">
-            <span className="inline-block bg-primary-blue text-white font-extrabold text-sm px-6 py-2.5 rounded-full shadow-md">
-              Học thuyết Hồ Chí Minh: &ldquo;Dân tộc trước hết, trên hết.&rdquo;
-            </span>
-          </div>
 
           <div className="max-w-md mx-auto mt-8">
             <button

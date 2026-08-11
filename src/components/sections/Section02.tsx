@@ -105,10 +105,10 @@ export default function Section02() {
 
                 <div className="w-full h-full relative">
                   <Image
-                    src="/images/vietnam-map.png"
+                    src="/images/Ban-do-Viet-Nam.png"
                     alt="Bản đồ Việt Nam"
                     fill
-                    className="object-contain scale-200"
+                    className="object-contain"
                   />
                 </div>
 
